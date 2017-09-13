@@ -52,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:shoutem/ui.git"
+    "url": "git+ssh://git@github.com:oonxt/ui.git"
   },
   "license": "BSD-3-Clause",
   "maintainers": [
