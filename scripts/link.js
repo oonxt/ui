@@ -7,7 +7,6 @@ const process = require('process');
 const nativeDependencies = [
   'react-native-vector-icons',
   'react-native-linear-gradient',
-  'react-native-share',
   'react-native-photo-view',
 ];
 

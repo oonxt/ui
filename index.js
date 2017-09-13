@@ -10,8 +10,6 @@ export { getTheme, defaultThemeVariables, dimensionRelativeToIphone };
 export { View } from './components/View';
 export { Screen } from './components/Screen';
 
-export { NavigationBar } from './components/NavigationBar';
-export { NavigationBarAnimations } from './components/NavigationBar/NavigationBarAnimations';
 export { DropDownMenu, DropDownModal } from './components/DropDownMenu';
 export { Overlay } from './components/Overlay';
 
@@ -42,7 +40,6 @@ export { LoadingIndicator } from './components/LoadingIndicator';
 export { PageIndicators } from './components/PageIndicators';
 export { default as RichMedia } from './components/RichMedia';
 export { Html } from './html';
-export { ShareButton } from './components/ShareButton';
 
 export {
   Heading,
@@ -59,5 +56,3 @@ export { Row } from './components/Row';
 export { Tile } from './components/Tile';
 
 export { Lightbox } from './components/Lightbox';
-
-export { Examples } from './examples/components';

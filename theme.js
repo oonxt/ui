@@ -4,7 +4,6 @@ import {
   Platform,
   StatusBar,
 } from 'react-native';
-import NavigationExperimental from 'react-native-navigation-experimental-compat';
 
 import {
   INCLUDE,
@@ -15,14 +14,12 @@ import {
   getSizeRelativeToReference,
 } from '@shoutem/theme';
 
-const {
-  Header: NavigationHeader,
-} = NavigationExperimental;
-
 const window = Dimensions.get('window');
+const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : 0;
 
 const STATUS_BAR_OFFSET = (Platform.OS === 'android' ? -StatusBar.currentConfig : 0);
-const NAVIGATION_BAR_HEIGHT = NavigationExperimental.Header.HEIGHT;
+const NAVIGATION_BAR_HEIGHT = APPBAR_HEIGHT + STATUSBAR_HEIGHT;
 
 export const sizeVariants = ['', 'left', 'right', 'top', 'bottom', 'horizontal', 'vertical'];
 export const textComponents = [
@@ -1496,7 +1493,7 @@ export default (variables = defaultThemeVariables) => ({
     navigationBarImage: {
       flex: 1,
       flexGrow: 1,
-      height: NavigationHeader.HEIGHT,
+      height: NAVIGATION_BAR_HEIGHT,
       left: 0,
       solidifyAnimation(driver) {
         return {
